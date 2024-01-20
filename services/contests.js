@@ -29,7 +29,7 @@ const fetchContestRankings = async function (contestSlug) {
             if (pageNo > lastPage) {
                 return;
             }
-            // console.log(`Fetching rankings (${contestSlug}): page: ${pageNo}`);
+            console.log(`Fetching rankings (${contestSlug}): page: ${pageNo}`);
             try {
                 let res = await fetch(
                     `https://leetcode.com/contest/api/ranking/${contestSlug}/?pagination=${pageNo}&region=global`

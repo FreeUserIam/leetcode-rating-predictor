@@ -1,1 +1,1 @@
-cmd_Release/predict_addon.node := rm -rf "Release/predict_addon.node" && cp -af "Release/obj.target/predict_addon.node" "Release/predict_addon.node"
+cmd_Release/predict_addon.node := ln -f "Release/obj.target/predict_addon.node" "Release/predict_addon.node" 2>/dev/null || (rm -rf "Release/predict_addon.node" && cp -af "Release/obj.target/predict_addon.node" "Release/predict_addon.node")
